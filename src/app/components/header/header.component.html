@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Angular App</a>
+
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/dashboard" *ngIf="roleName ==='ADMIN'">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/product" *ngIf="roleName ==='USER'">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/register">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/login" *ngIf="!isLoggedIn">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/logout" *ngIf="isLoggedIn && !isLoggedOut">LogOut</a>
+            </li>
+        </ul>
+    </div>
+</nav>
